@@ -48,21 +48,6 @@ export default function About() {
         <div className="container">
           <h1>{language === 'ar' ? 'عن الخرطوم إنتر فيلم' : 'About Khartoum Inter Film'}</h1>
         </div>
-        
-        <style jsx>{`
-          .about-hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 150px 0 100px;
-            text-align: center;
-            margin-top: 70px;
-          }
-          
-          .about-hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-          }
-        `}</style>
       </section>
 
       {/* About Content Section */}
@@ -152,124 +137,8 @@ export default function About() {
             </div>
           </div>
 
-          <style jsx>{`
-            .packages-section {
-              background: linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
-              padding: 80px 0;
-            }
-
-            .packages-grid {
-              display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-              gap: 2rem;
-              margin-top: 3rem;
-            }
-
-            .package-card {
-              background: white;
-              border: 1px solid rgba(0, 27, 224, 0.08);
-              border-radius: 16px;
-              padding: 2rem;
-              box-shadow: 0 12px 40px rgba(0,0,0,0.05);
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-
-            .package-card:hover {
-              transform: translateY(-5px);
-              box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            }
-
-            .package-card.featured {
-              border: 2px solid var(--primary);
-              position: relative;
-            }
-
-            .package-card.featured::before {
-              content: 'Most Popular';
-              position: absolute;
-              top: -12px;
-              left: 50%;
-              transform: translateX(-50%);
-              background: var(--primary);
-              color: white;
-              padding: 6px 16px;
-              border-radius: 20px;
-              font-size: 0.9rem;
-              font-weight: 600;
-              letter-spacing: 0.5px;
-            }
-
-            .package-header {
-              text-align: center;
-              margin-bottom: 1.5rem;
-            }
-
-            .package-header h3 {
-              font-size: 1.8rem;
-              color: var(--primary);
-              margin-bottom: 0.5rem;
-            }
-
-            .package-price {
-              color: var(--secondary);
-              font-weight: 600;
-              font-size: 1.1rem;
-            }
-
-            .package-content ul {
-              list-style: none;
-              padding: 0;
-              margin: 0;
-            }
-
-            .package-content li {
-              padding: 0.75rem 0;
-              border-bottom: 1px solid rgba(0,0,0,0.06);
-              color: var(--gray);
-              line-height: 1.6;
-              position: relative;
-              padding-left: 1.5rem;
-            }
-
-            .package-content li::before {
-              content: '✓';
-              position: absolute;
-              left: 0;
-              color: var(--primary);
-              font-weight: bold;
-            }
-
-            .package-content li:last-child {
-              border-bottom: none;
-            }
-          `}</style>
         </section>
 
-        <style jsx>{`
-          .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-          }
-
-          .about-text h2 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-size: 2.5rem;
-          }
-
-          .about-text h3 {
-            color: var(--secondary);
-            margin: 2rem 0 1rem;
-            font-size: 1.8rem;
-          }
-
-          .about-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-          }
-        `}</style>
       </section>
 
       {/* Values Section */}
@@ -291,70 +160,6 @@ export default function About() {
           </div>
         </div>
         
-        <style jsx>{`
-          .section {
-            padding: 80px 0;
-          }
-          
-          .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-          }
-          
-          .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-          }
-          
-          .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-          }
-          
-          .section-title p {
-            color: var(--gray);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-          }
-          
-          .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-          }
-          
-          .value-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-          }
-          
-          .value-card:hover {
-            transform: translateY(-5px);
-          }
-          
-          .value-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-          }
-          
-          .value-card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-          }
-          
-          .value-card p {
-            color: var(--gray);
-            line-height: 1.6;
-          }
-        `}</style>
       </section>
     </>
   );
