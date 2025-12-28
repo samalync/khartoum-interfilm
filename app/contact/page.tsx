@@ -1,7 +1,5 @@
 'use client';
 import { useState } from 'react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaClock, FaPaperPlane, FaCheckCircle } from 'react-icons/fa';
 
 export default function Contact() {
@@ -12,20 +10,20 @@ export default function Contact() {
     service: '',
     message: ''
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
-    
+
     setIsSubmitting(false);
     setIsSubmitted(true);
-    
+
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
@@ -85,8 +83,6 @@ export default function Contact() {
 
   return (
     <>
-      <Header />
-      
       {/* Hero Section */}
       <section className="contact-hero">
         <div className="container">
@@ -101,7 +97,7 @@ export default function Contact() {
               <span className="hero-sparkle">✨</span>
             </h1>
             <p className="hero-description">
-              Ready to bring your vision to life? Get in touch with our team of creative experts. 
+              Ready to bring your vision to life? Get in touch with our team of creative experts.
               We're here to help you create impactful marketing solutions that drive results.
             </p>
           </div>
@@ -135,7 +131,7 @@ export default function Contact() {
                 <h2>Send Us a Message</h2>
                 <p>Fill out the form below and we'll get back to you within 24 hours</p>
               </div>
-              
+
               {isSubmitted ? (
                 <div className="success-message">
                   <FaCheckCircle className="success-icon" />
@@ -157,7 +153,7 @@ export default function Contact() {
                         placeholder="Enter your name"
                       />
                     </div>
-                    
+
                     <div className="form-group">
                       <label htmlFor="email">Email Address *</label>
                       <input
@@ -170,7 +166,7 @@ export default function Contact() {
                         placeholder="Enter your email"
                       />
                     </div>
-                    
+
                     <div className="form-group">
                       <label htmlFor="phone">Phone Number</label>
                       <input
@@ -182,7 +178,7 @@ export default function Contact() {
                         placeholder="Enter your phone number"
                       />
                     </div>
-                    
+
                     <div className="form-group">
                       <label htmlFor="service">Service Interested In *</label>
                       <select
@@ -199,7 +195,7 @@ export default function Contact() {
                       </select>
                     </div>
                   </div>
-                  
+
                   <div className="form-group">
                     <label htmlFor="message">Your Message *</label>
                     <textarea
@@ -212,9 +208,9 @@ export default function Contact() {
                       placeholder="Tell us about your project, goals, or questions..."
                     />
                   </div>
-                  
-                  <button 
-                    type="submit" 
+
+                  <button
+                    type="submit"
                     className="submit-button"
                     disabled={isSubmitting}
                   >
@@ -240,27 +236,27 @@ export default function Contact() {
                 <h3>Follow Our Journey</h3>
                 <p>Stay updated with our latest projects and creative work</p>
                 <div className="social-links">
-                  <a 
-                    href="https://www.facebook.com/share/17ioDH89xR/?mibextid=wwXIfr" 
-                    target="_blank" 
+                  <a
+                    href="https://www.facebook.com/share/17ioDH89xR/?mibextid=wwXIfr"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="social-link facebook"
                   >
                     <span className="social-icon">📘</span>
                     <span className="social-name">Facebook</span>
                   </a>
-                  <a 
-                    href="https://www.instagram.com/khartoum1230?igsh=MXJ6eDRvcDlrbGdl&utm_source=qr" 
-                    target="_blank" 
+                  <a
+                    href="https://www.instagram.com/khartoum1230?igsh=MXJ6eDRvcDlrbGdl&utm_source=qr"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="social-link instagram"
                   >
                     <span className="social-icon">📸</span>
                     <span className="social-name">Instagram</span>
                   </a>
-                  <a 
-                    href="https://www.tiktok.com/@khartouminterfilm?_r=1&_t=ZM-91YdJa3dgqJ" 
-                    target="_blank" 
+                  <a
+                    href="https://www.tiktok.com/@khartouminterfilm?_r=1&_t=ZM-91YdJa3dgqJ"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="social-link tiktok"
                   >
@@ -300,8 +296,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
-      <Footer />
 
       <style jsx>{`
         /* Hero Section */
@@ -764,7 +758,7 @@ export default function Contact() {
             grid-template-columns: 1fr;
             gap: 3rem;
           }
-          
+
           .hero-title {
             font-size: 2.8rem;
           }
@@ -774,18 +768,18 @@ export default function Contact() {
           .form-grid {
             grid-template-columns: 1fr;
           }
-          
+
           .hero-title {
             font-size: 2.2rem;
           }
-          
+
           .contact-form-container,
           .social-section,
           .faq-section,
           .cta-card {
             padding: 2rem;
           }
-          
+
           .contact-hero {
             padding: 120px 0 60px;
           }
@@ -795,11 +789,11 @@ export default function Contact() {
           .hero-title {
             font-size: 1.8rem;
           }
-          
+
           .contact-cards-grid {
             grid-template-columns: 1fr;
           }
-          
+
           .contact-form-container {
             padding: 1.5rem;
           }

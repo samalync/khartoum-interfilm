@@ -1,7 +1,7 @@
 'use client';
 
-import Header from '../../components/Header';
 import { useLanguage } from '../../components/LanguageContext';
+import { Metadata } from 'next';
 
 interface CompanyValue {
   title: string;
@@ -41,8 +41,6 @@ export default function About() {
 
   return (
     <>
-      <Header />
-      
       {/* Hero Section */}
       <section className="about-hero">
         <div className="container">

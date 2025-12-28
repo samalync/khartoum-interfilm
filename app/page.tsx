@@ -3176,15 +3176,15 @@ export default function Home() {
               <p>{language === 'ar' ? 'شارك أهدافك والجدول الزمني والميزانية. نرد خلال 24 ساعة.' : 'Share your goals, timeline, and budget. We respond within 24 hours.'}</p>
               <div className="contact-meta">
                 <div className="contact-item">
-                  <FaEnvelope className="contact-icon" />
+                  {(FaEnvelope as any)({ className: "contact-icon" })}
                   <span>khartouminterfilm@gmail.com</span>
                 </div>
                 <div className="contact-item">
-                  <FaPhone className="contact-icon" />
+                  {(FaPhone as any)({ className: "contact-icon" })}
                   <span>0795429785</span>
                 </div>
                 <div className="contact-item">
-                  <FaClock className="contact-icon" />
+                  {(FaClock as any)({ className: "contact-icon" })}
                   <span>9:00AM - 5:00PM</span>
                 </div>
               </div>

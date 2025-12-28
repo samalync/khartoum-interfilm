@@ -105,12 +105,12 @@ const Header = () => {
   }, [activeSection]);
 
   const navItems = [
-    { id: 'home', label: language === 'ar' ? 'الرئيسية' : 'Home', icon: '' },
-    { id: 'services', label: language === 'ar' ? 'الخدمات' : 'Services', icon: '' },
-    { id: 'about', label: language === 'ar' ? 'من نحن' : 'About', icon: '' },
-    { id: 'team', label: language === 'ar' ? 'الفريق' : 'Team', icon: '' },
-    { id: 'partnerships', label: language === 'ar' ? 'الشراكات' : 'Partnerships', icon: '' },
-    { id: 'contact', label: language === 'ar' ? 'التواصل' : 'Contact', icon: '' },
+    { id: 'home', label: language === 'ar' ? 'الرئيسية' : 'Home', icon: '', type: 'section' },
+    { id: 'services', label: language === 'ar' ? 'الخدمات' : 'Services', icon: '', type: 'section' },
+    { id: 'about', label: language === 'ar' ? 'من نحن' : 'About', icon: '', type: 'page' },
+    { id: 'team', label: language === 'ar' ? 'الفريق' : 'Team', icon: '', type: 'section' },
+    { id: 'partnerships', label: language === 'ar' ? 'الشراكات' : 'Partnerships', icon: '', type: 'section' },
+    { id: 'contact', label: language === 'ar' ? 'التواصل' : 'Contact', icon: '', type: 'page' },
   ];
 
   return (
@@ -135,18 +135,28 @@ const Header = () => {
             <ul className="nav-list-creative">
               {navItems.map((item) => (
                 <li key={item.id} className="nav-item-creative">
-                  <a
-                    href={`#${item.id}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setActiveSection(item.id);
-                      scrollToSection(item.id);
-                    }}
-                    className={`nav-link-creative ${activeSection === item.id ? 'active' : ''}`}
-                  >
-                    <span className="nav-icon">{item.icon}</span>
-                    <span className="nav-label">{item.label}</span>
-                  </a>
+                  {item.type === 'page' ? (
+                    <Link
+                      href={`/${item.id}`}
+                      className={`nav-link-creative ${activeSection === item.id ? 'active' : ''}`}
+                    >
+                      <span className="nav-icon">{item.icon}</span>
+                      <span className="nav-label">{item.label}</span>
+                    </Link>
+                  ) : (
+                    <a
+                      href={`#${item.id}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setActiveSection(item.id);
+                        scrollToSection(item.id);
+                      }}
+                      className={`nav-link-creative ${activeSection === item.id ? 'active' : ''}`}
+                    >
+                      <span className="nav-icon">{item.icon}</span>
+                      <span className="nav-label">{item.label}</span>
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

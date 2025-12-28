@@ -1,7 +1,8 @@
 import { Service } from '../types';
 import { useLanguage } from './LanguageContext';
+import React from 'react';
 
-interface ServiceCardProps {
+interface ServiceCardProps extends React.HTMLAttributes<HTMLButtonElement> {
   service: Service;
   onClick: () => void;
 }
