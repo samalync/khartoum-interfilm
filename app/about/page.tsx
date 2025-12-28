@@ -1,7 +1,6 @@
 'use client';
 
 import { useLanguage } from '../../components/LanguageContext';
-import { Metadata } from 'next';
 
 interface CompanyValue {
   title: string;
