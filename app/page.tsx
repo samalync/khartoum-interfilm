@@ -792,8 +792,6 @@ export default function Home() {
 
   return (
     <>
-      <Header />
-      
       {/* Hero Section */}
       <section id="home" className="hero">
         <div className="container">
