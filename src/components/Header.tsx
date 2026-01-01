@@ -1,7 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { Link } from 'react-router-dom';
 import { useLanguage } from './LanguageContext';
 
 const Header = () => {
@@ -116,8 +115,8 @@ const Header = () => {
       <div className="header-wrapper">
         {/* Left Section: Logo */}
         <div className="header-left">
-          <Link href="/" className="logo-container">
-            <Image
+          <Link to="/" className="logo-container">
+            <img
               src="/k.png"
               alt="Khartoum Interfilm"
               width={130}
@@ -185,7 +184,7 @@ const Header = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .creative-header {
           position: fixed;
           top: 0;
@@ -199,7 +198,6 @@ const Header = () => {
 
         .creative-header.scrolled {
           background: rgba(255, 255, 255, 0.98);
-          backdrop-filter: blur(20px);
           padding: 0.5rem 0;
           box-shadow: 0 4px 22px rgba(0, 0, 0, 0.08);
         }
@@ -242,7 +240,7 @@ const Header = () => {
         .logo-circle {
           width: 46px;
           height: 46px;
-          background: linear-gradient(135deg, var(--primary), var(--secondary));
+          background: #001be0;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -342,49 +340,42 @@ const Header = () => {
           display: flex;
           align-items: center;
           padding: 4px;
-          background: rgba(255, 255, 255, 0.8);
-          backdrop-filter: blur(12px);
-          border: 1px solid rgba(0, 0, 0, 0.08);
-          border-radius: 30px;
+          background: rgba(255, 255, 255, 0.9);
+          border-radius: 20px;
           gap: 4px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
           transition: all 0.3s ease;
         }
 
-        .lang-switch:hover {
-          background: rgba(255, 255, 255, 0.95);
-          box-shadow: 0 6px 16px rgba(0, 27, 224, 0.08);
-          transform: translateY(-1px);
-        }
-
         .lang-pill {
-          padding: 6px 16px;
+          padding: 8px 16px;
           border-radius: 20px;
           border: none;
           background: transparent;
-          font-size: 0.85rem;
+          font-size: 14px;
           font-weight: 600;
-          letter-spacing: 0.02em;
+          letter-spacing: 0.5px;
           cursor: pointer;
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: all 0.3s ease;
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #64748b;
-          position: relative;
-          z-index: 1;
+          color: #666;
+          min-width: 60px;
         }
 
         .lang-pill:hover {
-          color: var(--primary);
-          background: rgba(37, 99, 235, 0.05);
+          color: #001be0;
+          background: rgba(0, 27, 224, 0.08);
+          transform: scale(1.05);
         }
 
         .lang-pill.active {
-          background: linear-gradient(135deg, var(--primary), var(--secondary));
-          color: #ffffff;
-          box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
-          transform: scale(1.05);
+          background: #001be0;
+          color: white;
+          box-shadow: 0 4px 12px rgba(0, 27, 224, 0.3);
+          transform: scale(1.08);
+          font-weight: 700;
         }
 
         .nav-item-creative {
@@ -406,8 +397,8 @@ const Header = () => {
         }
 
         .nav-link-creative:not(.active):hover {
-          background: rgba(0, 27, 224, 0.06);
-          border-color: rgba(0, 27, 224, 0.2);
+          background: linear-gradient(135deg, rgba(0, 27, 224, 0.08), rgba(0, 180, 255, 0.06));
+          border-color: rgba(0, 27, 224, 0.3);
         }
 
         .nav-link-creative:active {
@@ -440,7 +431,7 @@ const Header = () => {
         }
 
         .pulse-button {
-          background: linear-gradient(135deg, var(--primary), var(--secondary));
+          background: linear-gradient(135deg, #001be0, #00b4ff);
           color: white;
           border: none;
           padding: 0.875rem 2rem;

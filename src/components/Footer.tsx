@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { useState } from 'react';
 import { useLanguage } from './LanguageContext';
 
@@ -137,7 +136,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .footer {
           background: #262525ff;
           color: white;
